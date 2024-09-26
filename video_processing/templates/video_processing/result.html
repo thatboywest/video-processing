@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Processing Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h2 {
+            color: #333;
+        }
+        video {
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #28a745;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Video Processing Complete</h2>
+    <video width="320" height="240" controls>
+        <source src="{{ video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p><a href="{% url 'video_processing:upload_video' %}">Process another video</a></p>
+</body>
+</html>

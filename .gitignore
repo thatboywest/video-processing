@@ -1,0 +1,53 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+
+# Django
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+db.sqlite3
+
+# If you are using Postgres with Django
+*.psql
+
+# Environment Variables
+.env
+*.env
+
+# Virtualenv
+venv/
+env/
+ENV/
+.venv/
+.pyvenv/
+
+# Static files
+staticfiles/
+static/
+media/
+
+# Local settings
+local_settings.py
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore MacOS system files
+.DS_Store
+
+# Ignore JetBrains project settings
+.idea/
+
+# Ignore coverage report files
+htmlcov/
+.coverage
+.tox/
