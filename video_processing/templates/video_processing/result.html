@@ -35,6 +35,19 @@
         a:hover {
             color: #218838;
         }
+        .download-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+        .download-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -43,6 +56,10 @@
         <source src="{{ video_url }}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    
+    <!-- Download button -->
+    <a class="download-button" href="{{ video_url }}" download="processed_video.mp4">Download Video</a>
+
     <p><a href="{% url 'video_processing:upload_video' %}">Process another video</a></p>
 </body>
 </html>
