@@ -23,5 +23,5 @@ def crop_to_aspect_ratio(video_path, desired_aspect_ratio, output_path):
 
 def add_subtitles_to_clip(video_path, subtitles, output_path, box_coords, font_size, color, font_path):
     x, y, w, h = box_coords
-    subtitle_filter = f"subtitles={video_path}:force_style='FontName={font_path},FontSize={font_size},PrimaryColour={color},MarginV={y},MarginL={x},MarginR={x}'"
+    subtitle_filter = f"subtitles={subtitles}:force_style='FontName={font_path},FontSize={font_size},PrimaryColour={color},MarginV={y},MarginL={x},MarginR={x}'"
     ffmpeg.input(video_path).filter(subtitle_filter).output(output_path).run(overwrite_output=True)
